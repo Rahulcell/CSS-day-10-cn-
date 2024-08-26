@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#check {
+  display: none;
+}
+.menu-icon img {
+  width: 40px;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+}
+
+#check {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  left: -100%; 
+  top: 0%;
+  width: 250px;
+  height: 100vh;
+  background-color: #eee;
+  transition: left 0.6s ease; 
+  padding-top: 60px;
+}
+
+.content > p {
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.content>p:hover{
+  background-color: black;
+  color: white;
+  transition:0.4s ease;
+  transform:scale(1.04);
+}
+#check:checked + .menu-icon + .content {
+  left: 0;
+}
+
+#check:checked ~ .menu-icon img {
+  left: 260px; 
+}
+.content > p > a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+.content > p > a:hover{
+  color:white;
+}
+.main {
+  display: grid;
+  height: 100vh;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+.child {
+    background-color: whitesmoke;
+}
+.child1,
+.child2,
+.child3,
+.child4 {
+  margin-top: 80px;
+}
+
+.child img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.child p {
+    height: 10vw;
+  padding: 0px 5px;
+  text-align: justify;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 60px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav img:hover{
+  background-color: grey;
+}
+.nav img {
+  height: auto;
+  max-height: 40px;
+  width: auto;
+  padding: 5px;
+}
+.nav:first-child {
+  font-size: 1.5rem;
+}
+
+.but {
+  grid-template-columns: 4;
+  grid-column: 1/5;
+  text-decoration: none;
+  margin: 100px 0px;
+}
+.but > a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  outline: 1px solid;
+  margin:0px 5px;
+}
+.but > a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s ease;
+}
+.about {
+  grid-column: 1/5;
+}
+.about :first-child {
+  font-size: 2.5rem;
+}
+.about img {
+  grid-column: 1/5;
+  width: 100%;
+  padding: 0px 100px;
+}
+.about > .hh{
+    font-size: 2rem;
+}
+.about :nth-child(even){
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 100;
+}
+.about > .kk{
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.3;
+}
