@@ -93,6 +93,7 @@ body {
 .child p {
     height: 10vw;
   padding: 0px 5px;
+  font-size: 0.9rem;
   text-align: justify;
 }
 .nav {
